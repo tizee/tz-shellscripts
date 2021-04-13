@@ -11,4 +11,5 @@ for str in $*; do
 done
 # if $1 exists, then eval $@
 echo ${1:+"$@"}
-
+# read shell expansion for detail explanation
+# https://dev.to/greymd/why-1-is-used-in-shell-script-364h
