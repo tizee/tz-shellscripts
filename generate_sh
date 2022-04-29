@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+
+typeset -a styles
+styles=("Chromium"
+        "Google"
+        "LLVM"
+        "Mozilla"
+        "WebKit"
+        "Microsoft"
+        "GNU")
+for style in $styles; do
+  clang-format -style=$style -dump-config > $style.clang-format.yml
+done

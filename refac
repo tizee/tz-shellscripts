@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+typeset -a yamls
+yamls=(*)
+for yaml in $yamls; do
+  if [[ -d $yaml ]]; then
+    mv "./$yaml/$yaml.clang-format.yml" "$yaml/.clang-format.yml"
+  fi
+done
